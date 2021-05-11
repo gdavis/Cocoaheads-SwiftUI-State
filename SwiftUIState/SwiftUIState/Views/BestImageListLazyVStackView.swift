@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BestImageListLazyVStackView: View {
 
-    @State var viewModel = ListOfCachedImagesViewModel()
+    @StateObject var viewModel = ListOfCachedImagesViewModel()
     @State var selectedRow: ImageRow?
 
     var body: some View {
