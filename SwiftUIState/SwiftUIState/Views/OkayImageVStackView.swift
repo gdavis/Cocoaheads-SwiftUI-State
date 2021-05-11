@@ -48,7 +48,7 @@ struct OkayImageVStackView: View {
             }
             .frame(maxWidth: .infinity)
         }
-        .navigationTitle("Improved Image List")
+        .navigationTitle("Okay Image List")
     }
 }
 

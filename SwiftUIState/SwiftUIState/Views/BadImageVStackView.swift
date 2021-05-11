@@ -45,7 +45,7 @@ struct BadImageVStackView: View {
             }
             .frame(maxWidth: .infinity)
         }
-        .navigationTitle("Improper Image List")
+        .navigationTitle("Bad Image List")
     }
 }
 
