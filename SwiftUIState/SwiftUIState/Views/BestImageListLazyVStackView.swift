@@ -82,8 +82,5 @@ struct BestImageRowView: View {
         FadeInNetworkImage(imageViewModel: imageModel)
             .frame(width: 320, height: 100)
             .cornerRadius(12)
-            .onAppear() {
-                imageModel.load()
-            }
     }
 }

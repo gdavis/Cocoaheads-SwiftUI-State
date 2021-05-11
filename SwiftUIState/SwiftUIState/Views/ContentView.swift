@@ -16,11 +16,20 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 FadeInNetworkImage(imageViewModel: imageModel)
+                    .overlay(
+                        Text("SwiftUI State Management Tips")
+                            .font(.system(size: 24, weight: .bold, design: .rounded))
+                            .foregroundColor(.white)
+                            .shadow(radius: 4)
+                            .padding(4)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+                    )
 
                 List(viewModel.rows, id: \.self) { row in
                     NavigationLink(row.title, destination: row.destination)
                 }
             }
+            .edgesIgnoringSafeArea(.all)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
@@ -36,17 +45,17 @@ struct ContentView_Previews: PreviewProvider {
 class ContentViewModel {
 
     enum Row: CaseIterable {
-        case improperViewModelList
-        case improvedVStackList
+        case badImageListView
+        case okayImageListView
         case betterLazyVStackList
         case bestLazyVStackList
 
         var title: String {
             switch self {
-            case .improperViewModelList:
+            case .badImageListView:
                 return "Image List with Poor State Management"
 
-            case .improvedVStackList:
+            case .okayImageListView:
                 return "Image List with Improved State Management"
 
             case .betterLazyVStackList:
@@ -60,11 +69,11 @@ class ContentViewModel {
         var destination: some View {
             Group {
                 switch self {
-                case .improperViewModelList:
-                    ImproperImageListVStack()
+                case .badImageListView:
+                    BadImageVStackView()
 
-                case .improvedVStackList:
-                    ImageListVStackView()
+                case .okayImageListView:
+                    OkayImageVStackView()
 
                 case .betterLazyVStackList:
                     BetterImageListLazyVStack()

@@ -11,17 +11,16 @@ import SwiftUI
 
 struct FadeInNetworkImage: View {
     @ObservedObject var imageViewModel: NetworkImageModel
-    @State private var imageOpacity: Double {
-        didSet {
-            print("imageOpacity: \(imageOpacity)")
-        }
-    }
+    @State private var imageOpacity: Double
 
     let animation: Animation
 
     init(imageViewModel: NetworkImageModel, animation: Animation = .easeInOut(duration: 0.5)) {
         self.imageViewModel = imageViewModel
+
+        // @State can also be created from the init method
         self._imageOpacity = State(initialValue: imageViewModel.image != nil ? 1 : 0)
+        
         self.animation = animation
     }
 
@@ -30,7 +29,6 @@ struct FadeInNetworkImage: View {
             NetworkImage(imageViewModel: imageViewModel)
                 .opacity(imageOpacity)
         }
-        .drawingGroup(opaque: true, colorMode: ColorRenderingMode.linear)
         .onChange(of: imageViewModel.image) { image in
             withAnimation(animation) {
                 imageOpacity = image != nil ? 1 : 0

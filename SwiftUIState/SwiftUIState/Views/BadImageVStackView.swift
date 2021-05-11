@@ -1,5 +1,5 @@
 //
-//  ListWithImagesView.swift
+//  BadImageListVStack.swift
 //  SwiftUIState
 //
 //  Created by Grant Davis on 5/11/21.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ImageListVStackView: View {
+struct BadImageVStackView: View {
 
     @State var viewModel = ListOfImagesViewModel()
     @State var selectedRow: ImageRow?
@@ -16,16 +16,11 @@ struct ImageListVStackView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Text("Improvements:")
-                VStack(alignment: .leading) {
-                    Text("• Fading works")
-                    Text("• Images load properly")
-                    Text("• Images only load once")
-                    Text("• Selection does not reload images")
-                }
                 Text("Issues:")
                 VStack(alignment: .leading) {
-                    Text("• All images load immediately")
+                    Text("• All images are loaded immediately")
+                    Text("• Fading only works on first images")
+                    Text("• Selecting a row reloads everything")
                 }
                 .padding(.leading, 10)
             }
@@ -34,7 +29,9 @@ struct ImageListVStackView: View {
             VStack {
                 ForEach(viewModel.rows, id: \.id) { row in
                     Button(action: { selectedRow = row }, label: {
-                        ProperImageRowView(row: row)
+                        // creating the view model here will cause it to be re-created
+                        // each time the view renders the body. which is a lot.
+                        ImproperImageRowView(imageModel: NetworkImageModel(url: row.url))
                     })
                     .overlay(
                         Group {
@@ -48,25 +45,26 @@ struct ImageListVStackView: View {
             }
             .frame(maxWidth: .infinity)
         }
-        .navigationTitle("Improved Image List")
+        .navigationTitle("Improper Image List")
     }
 }
 
 
-struct ProperImageRowView: View {
+struct ImproperImageRowView: View {
+    @ObservedObject var imageModel: NetworkImageModel
 
-    @StateObject var imageModel: NetworkImageModel
+    init(imageModel: NetworkImageModel) {
+        self.imageModel = imageModel
 
-    init(row: ImageRow) {
-        self._imageModel = StateObject(wrappedValue: NetworkImageModel(url: row.url))
+        // invoking an image load directly from the init can cause
+        // more than you want to load. its better to rely on onAppear
+        // to trigger actions that perform significant work
+        imageModel.load()
     }
 
     var body: some View {
         FadeInNetworkImage(imageViewModel: imageModel)
             .frame(width: 320, height: 100)
             .cornerRadius(12)
-            .onAppear() {
-                imageModel.load()
-            }
     }
 }

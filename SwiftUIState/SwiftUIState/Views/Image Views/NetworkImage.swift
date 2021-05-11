@@ -25,16 +25,12 @@ struct NetworkImage: View {
         .onAppear() {
             self.imageViewModel.load()
         }
+        // use with caution! there is currently a bug that causes
+        // onAppear to be called in the wrong order. uncommenting
+        // this will cause weirdness if we try to cancel
+        // previous image loads before they finish.
 //        .onDisappear() {
-//            // TODO:(grant) remove this compiler check when Xcode fixes the issue with
-//            // onAppear/onDisappear being called incorrectly in SwiftUI.
-//            // There is an ongoing problem that keeps resurfacing that makes the image load
-//            // cancel when it should peform a load. As of our tests on 5/5/21 this only seems
-//            // to occur when using the NetworkImage on macOS. Here's a apple forum convo about it:
-//            // https://developer.apple.com/forums/thread/656655
-//            #if os(iOS)
 //            self.imageViewModel.cancel()
-//            #endif
 //        }
     }
 }

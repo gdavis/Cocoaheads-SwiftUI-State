@@ -11,12 +11,12 @@
 		774159D8264ADC8F004B24B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774159D7264ADC8F004B24B0 /* ContentView.swift */; };
 		774159DA264ADC90004B24B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774159D9264ADC90004B24B0 /* Assets.xcassets */; };
 		774159DD264ADC90004B24B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774159DC264ADC90004B24B0 /* Preview Assets.xcassets */; };
-		774159E6264ADD60004B24B0 /* ImageListVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774159E5264ADD60004B24B0 /* ImageListVStackView.swift */; };
+		774159E6264ADD60004B24B0 /* OkayImageVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774159E5264ADD60004B24B0 /* OkayImageVStackView.swift */; };
 		774159E8264ADF08004B24B0 /* FadeInImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774159E7264ADF08004B24B0 /* FadeInImage.swift */; };
 		774159EA264AE3ED004B24B0 /* ListOfImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774159E9264AE3ED004B24B0 /* ListOfImagesViewModel.swift */; };
 		774159ED264AE40B004B24B0 /* NetworkImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774159EC264AE40B004B24B0 /* NetworkImageModel.swift */; };
 		774159EF264AE42A004B24B0 /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774159EE264AE42A004B24B0 /* NetworkImage.swift */; };
-		774159F1264AE47A004B24B0 /* BrokenImageListVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774159F0264AE47A004B24B0 /* BrokenImageListVStack.swift */; };
+		774159F1264AE47A004B24B0 /* BadImageVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774159F0264AE47A004B24B0 /* BadImageVStackView.swift */; };
 		774159F3264AED71004B24B0 /* BetterImageListLazyVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774159F2264AED71004B24B0 /* BetterImageListLazyVStack.swift */; };
 		774159F5264AEE31004B24B0 /* BestImageListLazyVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774159F4264AEE31004B24B0 /* BestImageListLazyVStackView.swift */; };
 /* End PBXBuildFile section */
@@ -28,12 +28,12 @@
 		774159D9264ADC90004B24B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		774159DC264ADC90004B24B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		774159DE264ADC90004B24B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		774159E5264ADD60004B24B0 /* ImageListVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListVStackView.swift; sourceTree = "<group>"; };
+		774159E5264ADD60004B24B0 /* OkayImageVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkayImageVStackView.swift; sourceTree = "<group>"; };
 		774159E7264ADF08004B24B0 /* FadeInImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInImage.swift; sourceTree = "<group>"; };
 		774159E9264AE3ED004B24B0 /* ListOfImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfImagesViewModel.swift; sourceTree = "<group>"; };
 		774159EC264AE40B004B24B0 /* NetworkImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageModel.swift; sourceTree = "<group>"; };
 		774159EE264AE42A004B24B0 /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
-		774159F0264AE47A004B24B0 /* BrokenImageListVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrokenImageListVStack.swift; sourceTree = "<group>"; };
+		774159F0264AE47A004B24B0 /* BadImageVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadImageVStackView.swift; sourceTree = "<group>"; };
 		774159F2264AED71004B24B0 /* BetterImageListLazyVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterImageListLazyVStack.swift; sourceTree = "<group>"; };
 		774159F4264AEE31004B24B0 /* BestImageListLazyVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestImageListLazyVStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,25 +88,25 @@
 		774159E4264ADD54004B24B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				774159EB264AE401004B24B0 /* Image View */,
+				774159EB264AE401004B24B0 /* Image Views */,
 				774159D7264ADC8F004B24B0 /* ContentView.swift */,
 				774159E9264AE3ED004B24B0 /* ListOfImagesViewModel.swift */,
-				774159F0264AE47A004B24B0 /* BrokenImageListVStack.swift */,
-				774159E5264ADD60004B24B0 /* ImageListVStackView.swift */,
+				774159F0264AE47A004B24B0 /* BadImageVStackView.swift */,
+				774159E5264ADD60004B24B0 /* OkayImageVStackView.swift */,
 				774159F2264AED71004B24B0 /* BetterImageListLazyVStack.swift */,
 				774159F4264AEE31004B24B0 /* BestImageListLazyVStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		774159EB264AE401004B24B0 /* Image View */ = {
+		774159EB264AE401004B24B0 /* Image Views */ = {
 			isa = PBXGroup;
 			children = (
 				774159EC264AE40B004B24B0 /* NetworkImageModel.swift */,
 				774159E7264ADF08004B24B0 /* FadeInImage.swift */,
 				774159EE264AE42A004B24B0 /* NetworkImage.swift */,
 			);
-			path = "Image View";
+			path = "Image Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,10 +181,10 @@
 				774159D8264ADC8F004B24B0 /* ContentView.swift in Sources */,
 				774159D6264ADC8F004B24B0 /* SwiftUIStateApp.swift in Sources */,
 				774159F5264AEE31004B24B0 /* BestImageListLazyVStackView.swift in Sources */,
-				774159F1264AE47A004B24B0 /* BrokenImageListVStack.swift in Sources */,
+				774159F1264AE47A004B24B0 /* BadImageVStackView.swift in Sources */,
 				774159ED264AE40B004B24B0 /* NetworkImageModel.swift in Sources */,
 				774159E8264ADF08004B24B0 /* FadeInImage.swift in Sources */,
-				774159E6264ADD60004B24B0 /* ImageListVStackView.swift in Sources */,
+				774159E6264ADD60004B24B0 /* OkayImageVStackView.swift in Sources */,
 				774159F3264AED71004B24B0 /* BetterImageListLazyVStack.swift in Sources */,
 				774159EA264AE3ED004B24B0 /* ListOfImagesViewModel.swift in Sources */,
 				774159EF264AE42A004B24B0 /* NetworkImage.swift in Sources */,
