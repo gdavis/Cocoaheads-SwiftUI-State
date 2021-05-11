@@ -17,6 +17,7 @@ struct BestImageListLazyVStackView: View {
         ScrollView {
             VStack(alignment: .leading) {
                 Text("Improvements:")
+                    .fontWeight(.bold)
                 VStack(alignment: .leading) {
                     Text("• Images load only when shown")
                     Text("• Images do not reload on second appearance")

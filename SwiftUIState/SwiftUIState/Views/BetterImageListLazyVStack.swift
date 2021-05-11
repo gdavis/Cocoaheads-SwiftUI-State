@@ -17,11 +17,13 @@ struct BetterImageListLazyVStack: View {
         ScrollView {
             VStack(alignment: .leading) {
                 Text("Improvements:")
+                    .fontWeight(.bold)
                 VStack(alignment: .leading) {
                     Text("• Views are lazily created")
                     Text("• Images load only when shown")
                 }
                 Text("Issues:")
+                    .fontWeight(.bold)
                 VStack(alignment: .leading) {
                     Text("• Images reload when brought back on screen")
                 }

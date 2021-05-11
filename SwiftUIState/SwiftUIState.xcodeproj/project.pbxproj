@@ -69,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				774159E4264ADD54004B24B0 /* Views */,
+				774159D7264ADC8F004B24B0 /* ContentView.swift */,
 				774159D5264ADC8F004B24B0 /* SwiftUIStateApp.swift */,
 				774159D9264ADC90004B24B0 /* Assets.xcassets */,
 				774159DE264ADC90004B24B0 /* Info.plist */,
@@ -89,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				774159EB264AE401004B24B0 /* Image Views */,
-				774159D7264ADC8F004B24B0 /* ContentView.swift */,
 				774159E9264AE3ED004B24B0 /* ListOfImagesViewModel.swift */,
 				774159F0264AE47A004B24B0 /* BadImageVStackView.swift */,
 				774159E5264ADD60004B24B0 /* OkayImageVStackView.swift */,

@@ -17,9 +17,11 @@ struct BadImageVStackView: View {
         ScrollView {
             VStack(alignment: .leading) {
                 Text("Issues:")
+                    .fontWeight(.bold)
                 VStack(alignment: .leading) {
                     Text("• All images are loaded immediately")
                     Text("• Fading only works on first images")
+                    Text("• View models are recreated with each state change")
                     Text("• Selecting a row reloads everything")
                 }
                 .padding(.leading, 10)

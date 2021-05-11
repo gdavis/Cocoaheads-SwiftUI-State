@@ -17,6 +17,7 @@ struct OkayImageVStackView: View {
         ScrollView {
             VStack(alignment: .leading) {
                 Text("Improvements:")
+                    .fontWeight(.bold)
                 VStack(alignment: .leading) {
                     Text("• Fading works")
                     Text("• Images load properly")
@@ -24,6 +25,7 @@ struct OkayImageVStackView: View {
                     Text("• Selection does not reload images")
                 }
                 Text("Issues:")
+                    .fontWeight(.bold)
                 VStack(alignment: .leading) {
                     Text("• All images load immediately")
                 }
