@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BadImageVStackView: View {
 
-    @State var viewModel = ListOfImagesViewModel()
+    @StateObject var viewModel = ListOfImagesViewModel()
     @State var selectedRow: ImageRow?
 
     var body: some View {
