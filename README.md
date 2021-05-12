@@ -1,6 +1,6 @@
 # Swift UI State Management
 
-This document cataloges my experiences with properly managing state with SwiftUI, as presented at Cocoaheads in May 2021. The document here is from my original documentation of the problem while working on a client app that made heavy use of lazy stacks, `@StateObject`, and issues we ran into properly storing view models in memory. 
+This document cataloges my experiences with properly managing state with SwiftUI, as presented at Cocoaheads in May 2021. The content and example app in this repo is from my original documentation of the problem while working on a client app that made heavy use of lazy stacks, `@StateObject`, and issues we ran into properly storing view models in memory. 
 
 ## Storing state for Child View Models
 SwiftUI is all about state, and maintaining that state can be rather difficult when you have more than a few properties stored as @State for your view. It is common practice to use a view model to store the state outside of the view, since our views are constantly recreated as our state changes. Keeping what state you want in memory can provide a challenge, much more so than it may seem at first glance.
